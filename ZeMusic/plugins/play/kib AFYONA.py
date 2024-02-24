@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client, filters
-from strings import get_command
+from strings import get_string
 from strings.filters import command
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
 from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
