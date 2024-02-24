@@ -7,7 +7,7 @@ from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
 
-REPLY_MESSAGE = "**صلي علي اشرف خلق الله 🥹✨**"
+REPLY_MESSAGE = "** صلي علي النبي وتبسم ♥️**"
 
 REPLY_MESSAGE_BUTTONS = [
     [
@@ -103,7 +103,7 @@ async def down(client, message):
 @app.on_message(filters.regex("يـوتيوب. 📽"))
 def reply_to_HEY(Client, message):
     message.reply_photo(
-        photo=f"https://telegra.ph/file/04b2f1f1c808dc49db35b.jpg",
+        photo=f"https://telegra.ph/file/4980eb521b9ccebee927f.jpg",
         caption=f"""**يتم استخدام هذا الامر لعرض تحميل من اليوتيوب**\n**استخدم الامر بهذا الشكل** `تنزيل` ** او ** `يوتيوب` ** كمثل تنزيل سوره الرحمن اضغط علي الامر لنسخ والاستخدام**""",
         reply_markup=InlineKeyboardMarkup(
             [
