@@ -2,6 +2,8 @@ import asyncio
 import config
 from pyrogram import Client, filters
 from pyrogram import filters
+from strings import get_string
+from strings.filters import command
 from ZeMusic import app
 from config import OWNER_ID
 from ZeMusic.misc import SUDOERS
@@ -10,7 +12,7 @@ from pyrogram.types import (InlineKeyboardButton,CallbackQuery,InlineKeyboardMar
 from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from ZeMusic.misc import SUDOERS
 
-@app.on_message(filters.command(["ابراج"], ""))
+@app.on_message(command(["ابراج","ابراج"]))
 async def abrag(c: Client, m: Message):
     global mid
     mid = m.message_id
@@ -38,11 +40,11 @@ async def abrag(c: Client, m: Message):
 async def elgadee(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الجدي
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  حاول ترطيب الأجواء مع الشريك، بعد ثورة الغضب التي انتابتك في الأيام الماضية 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -56,11 +58,11 @@ async def elgadee(c: Client, m: CallbackQuery):
 async def eldaloo(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الدلو
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  لا تتسرّع في الموافقة على قرار مهم قبل أن تدرس الوضع من جميع جوانبه، لأن الندم قد لا يفيدك لاحقاً 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -74,11 +76,11 @@ async def eldaloo(c: Client, m: CallbackQuery):
 async def elhout(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الحوت
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  صداقة قديمة تعود إلى الواجهة عن طريق المصادفة، لكنّ الشريك يشعر بالقلق، فسارع إلى توضيح الأمور 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -92,11 +94,11 @@ async def elhout(c: Client, m: CallbackQuery):
 async def elhamal(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الحمل
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  يحتاج الشريك اليوم إلى عاطفتك واهتمامك أكثر من أي وقت مضى، فاستمع إليه وأمن له ما يتمنّاه 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -110,11 +112,11 @@ async def elhamal(c: Client, m: CallbackQuery):
 async def elthawr(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الثور
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  يطلب منك الشريك أن تعطيه جواباً حاسماً بشأن طبيعة العلاقة بينكما، من دون أن يغفل عن أمور تهمكما 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -128,11 +130,11 @@ async def elthawr(c: Client, m: CallbackQuery):
 async def elgawzaa(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الجوزاء
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  مهمة إقناع الشريك بالسير معك حتى النهاية ليست صعبة، وتجاربه السابقة معك مشجعة جداً 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -146,11 +148,11 @@ async def elgawzaa(c: Client, m: CallbackQuery):
 async def elsaratan(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج السرطان
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  تمنحك مساندة الحبيب لك في هذه المرحلة الاندفاع والتفاؤل في الحياة والتفكير في الخطوات المقبلة بثقة كبيرة جداً 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -164,11 +166,11 @@ async def elsaratan(c: Client, m: CallbackQuery):
 async def elaasad(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الاسد
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  لا تحمّل الشريك مسؤولية الأخطاء القديمة، وحاول أن تتخطى ذلك برحابة صدر وبساطة 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -182,11 +184,11 @@ async def elaasad(c: Client, m: CallbackQuery):
 async def elazraaa(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج العذراء
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  تشعر بقوة العاطفة وتزداد رغبتك في التقرّب من الشريك الذي تكنّ له الحب الكبير 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -200,11 +202,11 @@ async def elazraaa(c: Client, m: CallbackQuery):
 async def elmezaan(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج الميزان
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  تمرّ بظرف صعب اليوم وأنت بأمسّ الحاجة إلى مساندة الشريك لتجاوز ما تواجهه بأقل ضرر ممكن 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -218,11 +220,11 @@ async def elmezaan(c: Client, m: CallbackQuery):
 async def elaqrab(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج العقرب
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  كثرة التأجيل في حسم الأمور المصيرية تهدد علاقتك بالشريك، وتدفعها إلى المزيد من التأزم 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
@@ -236,11 +238,11 @@ async def elaqrab(c: Client, m: CallbackQuery):
 async def elqoos(c: Client, m: CallbackQuery):
     a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
-        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🖤🙂", show_alert=True)
+        await c.answer_callback_query(m.id, text="صاحب الامر هو فقط من يستطيع الضغط على الزر 🐉", show_alert=True)
         return
     await m.message.delete()
     abrag_text = """•︙برج القوس
-•︙من تاريخ 2021-4-1
+•︙من تاريخ 2023-4-1
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
 •︙عاطفياً :  كن طويل البال مع الشريك وامنحه مزيداً من الوقت، فهو ساعدك كثيراً ويستحق منك بعض التضحية 
 ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉
